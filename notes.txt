@@ -1,0 +1,186 @@
+Windows PowerShell
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+Try the new cross-platform PowerShell https://aka.ms/pscore6
+
+PS C:\Users\Neosoft\Desktop\react-typescript\react-dev> npm init
+This utility will walk you through creating a package.json file.
+It only covers the most common items, and tries to guess sensible defaults.
+git repository:
+keywords:
+author:
+license: (ISC)
+About to write to C:\Users\Neosoft\Desktop\react-typescript\react-dev\package.json:
+
+{
+  "name": "react-dev",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
+
+
+Is this OK? (yes)
+PS C:\Users\Neosoft\Desktop\react-typescript\react-dev>
+PS C:\Users\Neosoft\Desktop\react-typescript\react-dev>
+PS C:\Users\Neosoft\Desktop\react-typescript\react-dev>
+PS C:\Users\Neosoft\Desktop\react-typescript\react-dev>
+PS C:\Users\Neosoft\Desktop\react-typescript\react-dev>
+PS C:\Users\Neosoft\Desktop\react-typescript\react-dev>
+PS C:\Users\Neosoft\Desktop\react-typescript\react-dev>
+PS C:\Users\Neosoft\Desktop\react-typescript\react-dev>
+PS C:\Users\Neosoft\Desktop\react-typescript\react-dev>
+PS C:\Users\Neosoft\Desktop\react-typescript\react-dev>
+PS C:\Users\Neosoft\Desktop\react-typescript\react-dev>
+PS C:\Users\Neosoft\Desktop\react-typescript\react-dev>
+PS C:\Users\Neosoft\Desktop\react-typescript\react-dev>
+PS C:\Users\Neosoft\Desktop\react-typescript\react-dev>
+PS C:\Users\Neosoft\Desktop\react-typescript\react-dev> npm i -D typescript
+
+added 1 package, and audited 2 packages in 5s
+
+found 0 vulnerabilities
+PS C:\Users\Neosoft\Desktop\react-typescript\react-dev> npx tsc src/index.ts
+../../../node_modules/@types/react/index.d.ts:239:10 - error TS2456: Type alias 'ReactFragment' circularly references itself.
+
+239     type ReactFragment = {} | Iterable<ReactNode>;
+             ~~~~~~~~~~~~~
+
+../../../node_modules/@types/react/index.d.ts:239:31 - error TS2304: Cannot find name 'Iterable'.
+
+239     type ReactFragment = {} | Iterable<ReactNode>;
+                                  ~~~~~~~~
+
+../../../node_modules/@types/react/index.d.ts:240:10 - error TS2456: Type alias 'ReactNode' circularly references itself.       
+
+240     type ReactNode = ReactChild | ReactFragment | ReactPortal | boolean | null | undefined;
+             ~~~~~~~~~
+
+../../../node_modules/@types/react/index.d.ts:421:23 - error TS2583: Cannot find name 'Set'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2015' or later.
+
+421         interactions: Set<SchedulerInteraction>,
+                          ~~~
+
+../../../node_modules/@types/scheduler/tracing.d.ts:64:35 - error TS2583: Cannot find name 'Set'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2015' or later.
+
+64   onWorkScheduled: (interactions: Set<Interaction>, threadID: number) => void;
+                                     ~~~
+
+../../../node_modules/@types/scheduler/tracing.d.ts:70:34 - error TS2583: Cannot find name 'Set'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2015' or later.
+
+70   onWorkCanceled: (interactions: Set<Interaction>, threadID: number) => void;
+
+../../../node_modules/@types/scheduler/tracing.d.ts:80:33 - error TS2583: Cannot find name 'Set'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2015' or later.
+
+80   onWorkStarted: (interactions: Set<Interaction>, threadID: number) => void;
+                                   ~~~
+
+../../../node_modules/@types/scheduler/tracing.d.ts:86:33 - error TS2583: Cannot find name 'Set'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2015' or later.
+
+86   onWorkStopped: (interactions: Set<Interaction>, threadID: number) => void;
+                                   ~~~
+
+../../../node_modules/@types/scheduler/tracing.d.ts:90:12 - error TS2583: Cannot find name 'Set'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2015' or later.
+
+90   current: Set<Interaction>;
+              ~~~
+
+../../../node_modules/@types/scheduler/tracing.d.ts:102:40 - error TS2583: Cannot find name 'Set'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2015' or later.
+
+                                           ~~~
+
+Found 10 errors in 2 files.
+
+Errors  Files
+     4  ../../../node_modules/@types/react/index.d.ts:239
+     6  ../../../node_modules/@types/scheduler/tracing.d.ts:64
+PS C:\Users\Neosoft\Desktop\react-typescript\react-dev> ls
+
+
+    Directory: C:\Users\Neosoft\Desktop\react-typescript\react-dev
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----        16-05-2022     10:15                node_modules
+d-----        16-05-2022     10:26                src
+-a----        16-05-2022     10:15            990 package-lock.json
+-a----        16-05-2022     10:15            260 package.json
+
+
+PS C:\Users\Neosoft\Desktop\react-typescript\react-dev> node src/index.js
+2 * 2 = 4
+PS C:\Users\Neosoft\Desktop\react-typescript\react-dev> npx tsc --init
+
+Created a new tsconfig.json with:
+                                                                                                                     TS
+  target: es2016
+  module: commonjs
+  strict: true
+  esModuleInterop: true
+  skipLibCheck: true
+  forceConsistentCasingInFileNames: true
+
+
+You can learn more at https://aka.ms/tsconfig.json
+[11:31:22 am] Starting compilation in watch mode...
+
+[11:31:24 am] Found 0 errors. Watching for file changes.
+
+Terminate batch job (Y/N)? y
+2 * 2 = 4
+PS C:\Users\Neosoft\Desktop\react-typescript\react-dev> node dist/index.js
+2 * 2 = 4
+PS C:\Users\Neosoft\Desktop\react-typescript\react-dev> node dist/index.js
+2 * 2 = 4
+PS C:\Users\Neosoft\Desktop\react-typescript\react-dev> node dist/index.js
+2 * 5 = 10
+PS C:\Users\Neosoft\Desktop\react-typescript\react-dev> npm i -D nodemon
+
+added 116 packages, and audited 118 packages in 9s
+
+16 packages are looking for funding
+
+found 0 vulnerabilities
+[nodemon] 2.0.16
+[nodemon] to restart at any time, enter `rs`
+[nodemon] watching path(s): *.*
+[nodemon] watching extensions: js,mjs,json
+[nodemon] starting `node dist/index.js`
+2 * 5 = 10
+[nodemon] clean exit - waiting for changes before restart
+[nodemon] restarting due to changes...
+11:42:30 am - Starting compilation in watch mode...
+[COMPILER]
+[COMPILER]
+[COMPILER] 11:42:32 am - Found 0 errors. Watching for file changes.
+[NODEMON] 2 * 2 = 4
+[NODEMON] ^CTerminate batch job (Y/N)? nodemon -w dist -q dist/index.js exited with code 3221225786
+[COMPILER] ^Ctsc -w exited with code 3221225786
+y
+PS C:\Users\Neosoft\Desktop\react-typescript\react-dev> npx concurrently -k -n COMPILER,NODEMON -c yellow,blue "tsc -w" "nodemon -w dist -q dist/index.js
+11:45:38 am - Starting compilation in watch mode...
+[COMPILER]
+[NODEMON] 2 * 2 = 4
+[COMPILER]
+[COMPILER] 11:45:40 am - Found 0 errors. Watching for file changes.
+[NODEMON] 2 * 2 = 4
+[NODEMON] 2 * 5 = 10
+
+
+
+
+
+
+
+
+
+
+
+
+
