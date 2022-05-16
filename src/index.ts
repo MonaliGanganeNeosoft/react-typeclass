@@ -1,40 +1,30 @@
-//Interfaces
-interface Profile {
-  readonly name: string;
-  age?: number;
+//Functions (optional and default parameters)
+function sum(a: number, b: number = 0): number {
+  return a + b;
 }
-let profile: Profile = {
-  name: "Moni",
-};
-//index Signature
-interface A {
-  someProp: string;
-  [key: string]: number | string;
-}
-const a: A = { someProp: "Some Prop" };
-a.x = 1;
-a.y = 2;
+console.log(sum(2, 3));
 
-//Call Signature
-interface Sum {
-  (a: number, b: number): number;
-  prop1: string;
-}
-const sum: Sum = (a, b) => a + b;
-sum.prop1 = "Some Prop";
-console.log(sum.prop1);
-console.log(sum(2, 8));
+type myFunc = (a: number, b: number) => number;
+const num2: myFunc = (a, b) => a + b;
+console.log(num2(2, 5));
 
-//Extending interfaces
-interface Parent {
-  x: string;
+//Unknown number of arguments
+function sumEveryThing(
+  arg1: string,
+  arg2: boolean,
+  ...numbers: number[]
+): number {
+  return numbers.reduce((result: any, num: any) => result + num, 0);
 }
-interface Parent2 {
-  y: string;
+console.log(sumEveryThing("check:", true, 2, 3, 4, 5));
+
+// function calcArea(width: number, height: number): number;
+// function calcArea(length: number): number;
+
+function calcArea(...args: number[]): number {
+  if (args.length === 2) {
+    return args[0] * args[1];
+  }
+  return Math.pow(args[0], 2);
 }
-interface Parent3 {
-  z: string;
-}
-interface Child extends Parent, Parent2, Parent3 {}
-let Child: Child = { x: "Some prop", y: "y prop", z: "z prop" };
-console.log(Child);
+console.log(calcArea(3));
